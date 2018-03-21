@@ -5,4 +5,5 @@
     <string name="skip_previous_song">Skip to previous song</string>
     <string name="skip_next_song">Skip to next song</string>
     <string name="play_song">Play current song</string>
+    <string name="go_playlist">Go to playlist</string>
 </resources>

@@ -5,12 +5,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.musicalstructureapp.NowPlaying">
-    <TextView
-        android:id="@+id/title_text"
-        style="@style/text_views"
-        android:layout_alignParentTop="true"
-        android:text="@string/now_playing"
-        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/text_views"
+            android:layout_weight="9"
+            android:text="@string/now_playing" />
+
+        <ImageView
+            android:id="@+id/playlist_button"
+            style="@style/buttons"
+            android:layout_weight="1"
+            android:contentDescription="@string/go_playlist"
+            android:minHeight="@dimen/min_touch_item_size"
+            android:minWidth="@dimen/min_touch_item_size"
+            android:src="@drawable/ic_playlist_play" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/album_art_big"
@@ -47,22 +62,22 @@
                 android:id="@+id/large_skip_back_button"
                 style="@style/buttons"
                 android:layout_weight="3"
-                android:src="@drawable/ic_skip_previous"
-                android:contentDescription="@string/skip_previous_song"/>
+                android:contentDescription="@string/skip_previous_song"
+                android:src="@drawable/ic_skip_previous" />
 
             <ImageView
                 android:id="@+id/large_play_button"
                 style="@style/buttons"
                 android:layout_weight="3"
-                android:src="@drawable/ic_play_circle_filled"
-                android:contentDescription="@string/play_song"/>
+                android:contentDescription="@string/play_song"
+                android:src="@drawable/ic_play_circle_filled" />
 
             <ImageView
                 android:id="@+id/large_skip_forward_button"
                 style="@style/buttons"
                 android:layout_weight="3"
-                android:src="@drawable/ic_skip_next"
-                android:contentDescription="@string/skip_next_song"/>
+                android:contentDescription="@string/skip_next_song"
+                android:src="@drawable/ic_skip_next" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

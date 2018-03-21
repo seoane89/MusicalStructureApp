@@ -1,5 +1,6 @@
 package com.example.android.musicalstructureapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,6 +33,7 @@ public class NowPlaying extends AppCompatActivity {
         ImageView skipBackButton = (ImageView) findViewById(R.id.large_skip_back_button);
         ImageView skipForwardButton = (ImageView) findViewById(R.id.large_skip_forward_button);
         ImageView playButton = (ImageView) findViewById(R.id.large_play_button);
+        ImageView playlistButton = (ImageView) findViewById(R.id.playlist_button);
 
         //set the onClick listeners for each button
 
@@ -59,6 +61,14 @@ public class NowPlaying extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), R.string.play_song,
                         Toast.LENGTH_SHORT).show();
+            }
+        });
+        playlistButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent ii = new Intent(NowPlaying.this, YourMusic.class);
+                startActivity(ii);
             }
         });
     }
